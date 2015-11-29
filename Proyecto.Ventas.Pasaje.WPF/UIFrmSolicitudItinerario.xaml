@@ -1,0 +1,50 @@
+﻿<Page x:Class="Proyecto.Ventas.Pasaje.WPF.UIFrmSolicitudItinerario"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:WinForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+      mc:Ignorable="d"
+	Title="UIFrmSolicitudItinerario" Width="1110" HorizontalAlignment="Left" Height="800">
+
+    <Grid Height="695" VerticalAlignment="Top" HorizontalAlignment="Left" Width="259">
+        <Border CornerRadius="10,10,10,10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,10,0,-97" Width="239">
+        </Border>
+        <Border Name="borderDepartamentos" BorderBrush="#607D8B" BorderThickness="1" CornerRadius="10,10,10,10" Margin="23,256,21,-83" />
+        <Label Content="ITINERARIO" Margin="64,15,61,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" FontFamily="Pacifico" Foreground="#2196F3" />
+        <Calendar SelectedDatesChanged="calFecha_SelectedDatesChanged" Name="calFecha" Margin="30,61,24,460"/>
+        <Border CornerRadius="10,10,10,10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="779" Margin="267,9,-581,-93" VerticalAlignment="Top" Width="573"/>
+        <Border CornerRadius="10,10,10,10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="753" Margin="627,19,-552,-77" VerticalAlignment="Top" Width="184"/>
+
+        <WindowsFormsHost HorizontalAlignment="Center" Height="758" Margin="281,17,-354,-80" VerticalAlignment="Top" Width="332" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
+            <WinForms:DataGridView x:Name="dgModeloBus" ScrollBars="None" ColumnHeadersVisible="False" RowHeadersVisible="False" AllowUserToDeleteRows="False" AllowUserToResizeColumns="False" AllowUserToResizeRows="False" CellClick="dgModeloBus_CellClick" AllowUserToAddRows="False" MultiSelect="False" >
+            </WinForms:DataGridView>
+        </WindowsFormsHost>
+
+        <Rectangle  Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="32" Margin="636,33,-543,0" Stroke="Black" VerticalAlignment="Top" Width="166"/>
+        <Label Content="DATOS DEL VIAJE" HorizontalAlignment="Center" Margin="653,35,-528,0" VerticalAlignment="Top" Width="134" FontSize="14" FontWeight="Bold" Foreground=" #2196f3"/>
+        <Label Name="lblDepartamento" HorizontalAlignment="Center" Margin="643,76,-539,0" VerticalAlignment="Top" Width="155" Height="30" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Label Name="lblHora" HorizontalAlignment="Center" Margin="643,108,-539,0" VerticalAlignment="Top" Width="155" Height="36" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Label Name="lblFecha" HorizontalAlignment="Center" Margin="644,148,-540,0" VerticalAlignment="Top" Width="155" Height="35" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Label Name="lblInterno" HorizontalAlignment="Center" Margin="646,187,-542,0" VerticalAlignment="Top" Width="155" Height="29" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Label Name="lblTipoBus" HorizontalAlignment="Center" Margin="647,221,-543,0" VerticalAlignment="Top" Width="155" Height="37" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center"/>
+        <Rectangle  Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="32" Margin="634,266,-541,0" Stroke="Black" VerticalAlignment="Top" Width="166"/>
+        <Label Content="DATOS DEL BUS" HorizontalAlignment="Center" Margin="658,268,-516,0" VerticalAlignment="Top" Width="117" FontSize="14" FontWeight="Bold" Foreground=" #2196f3"/>
+        <Label Content="ASIENTOS :" HorizontalAlignment="Left" Margin="636,302,-482,0" VerticalAlignment="Top" Width="105" FontWeight="Bold"/>
+        <Label Name="lblNroAsientos" Content="" HorizontalAlignment="Left" Margin="758,302,-540,0" VerticalAlignment="Top" Width="41"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="639,337,-402,0" VerticalAlignment="Top" Width="22" Stretch="Fill" Source="Images/sale.png"/>
+        <Label Content="VENDIDOS : " HorizontalAlignment="Left" Margin="668,332,-492,0" VerticalAlignment="Top" Width="83" FontWeight="Bold"/>
+        <Label Name="lblNroAsientosVendidos" Content="" HorizontalAlignment="Left" Margin="763,332,-545,0" VerticalAlignment="Top" Width="41"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="639,367,-402,0" VerticalAlignment="Top" Width="22" Stretch="Fill" Source="Images/reserva.png"/>
+        <Label Content="RESERVADOS : " HorizontalAlignment="Left" Margin="668,362,-502,0" VerticalAlignment="Top" Width="93" FontWeight="Bold"/>
+        <Label Name="lblNroAsientosReservados" Content="" HorizontalAlignment="Left" Margin="763,362,-545,0" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.5,0.5">
+        </Label>
+        <Image HorizontalAlignment="Left" Height="18" Margin="639,397,-402,0" VerticalAlignment="Top" Width="22" Stretch="Fill" Source="Images/a.png"/>
+        <Label Content="VACANTES : " HorizontalAlignment="Left" Margin="668,392,-502,0" VerticalAlignment="Top" Width="93" FontWeight="Bold"/>
+        <Label Name="lblNroAsientosVacantes" Content="" HorizontalAlignment="Left" Margin="763,392,-545,0" VerticalAlignment="Top" Width="41"/>
+        <Border BorderBrush="Black" CornerRadius="10,10,10,10" BorderThickness="1" HorizontalAlignment="Left" Height="779" Margin="858,9,-835,-93" VerticalAlignment="Top" Width="236"/>
+        <Label x:Name="label" Content="LISTA DE PASAJEROS" HorizontalAlignment="Center" Margin="858,26,-835,0" VerticalAlignment="Top" Width="236" Height="45" FontWeight="Bold" HorizontalContentAlignment="Center" FontSize="21.333"/>
+        <DataGrid x:Name="dgPasajeros" HorizontalAlignment="Left" Margin="877,79,-813,-57" VerticalAlignment="Top" Width="195" Height="673"/>
+
+    </Grid>
+</Page>

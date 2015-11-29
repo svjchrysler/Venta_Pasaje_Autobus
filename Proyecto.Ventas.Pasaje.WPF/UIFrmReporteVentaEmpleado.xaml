@@ -1,0 +1,24 @@
+﻿<Page x:Class="Proyecto.Ventas.Pasaje.WPF.UIFrmReporteVentaEmpleado"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+      mc:Ignorable="d"
+	Title="UIFrmReporteVentaEmpleado" Width="1165" Height="513.5">
+
+    <Grid Margin="0,0,196,0" Height="564" VerticalAlignment="Top">
+        <Border BorderBrush="Black" CornerRadius="10,10,10,10" BorderThickness="1" HorizontalAlignment="Left" Height="491" Margin="15,9,0,0" VerticalAlignment="Top" Width="942"/>
+        <DatePicker Name="dpDesde" HorizontalAlignment="Left" Margin="234,35,0,0" VerticalAlignment="Top"/>
+        <Label Content="DESDE : " HorizontalAlignment="Left" Margin="166,36,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="dpHasta" HorizontalAlignment="Left" Margin="515,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="HASTA : " HorizontalAlignment="Left" Margin="447,35,0,0" VerticalAlignment="Top"/>
+        <WindowsFormsHost HorizontalAlignment="Left" Height="404" Margin="26,83,0,0" VerticalAlignment="Top" Width="908">
+            <rv:ReportViewer x:Name="reportEmpleado" />
+        </WindowsFormsHost>
+        <Button Name="btnBuscar" Content="BUSCAR" HorizontalAlignment="Left" Margin="685,35,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.453,0.48" Click="btnBuscar_Click"/>
+    </Grid>
+</Page>

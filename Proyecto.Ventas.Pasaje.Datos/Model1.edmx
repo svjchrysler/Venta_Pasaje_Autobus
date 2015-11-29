@@ -1,0 +1,2422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VENTAS_PASAJE_MODEL.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="VENTAS_PASAJE_MODELStoreContainer">
+          <EntitySet Name="ASIENTO" EntityType="VENTAS_PASAJE_MODEL.Store.ASIENTO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AUXILIAR" EntityType="VENTAS_PASAJE_MODEL.Store.AUXILIAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BUS" EntityType="VENTAS_PASAJE_MODEL.Store.BUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CAJA" EntityType="VENTAS_PASAJE_MODEL.Store.CAJA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CAJA_USUARIO" EntityType="VENTAS_PASAJE_MODEL.Store.CAJA_USUARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CARGO" EntityType="VENTAS_PASAJE_MODEL.Store.CARGO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CLIENTE" EntityType="VENTAS_PASAJE_MODEL.Store.CLIENTE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="VENTAS_PASAJE_MODEL.Store.DEPARTAMENTO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DETALLE_DEPARTAMENTO_HORARIO" EntityType="VENTAS_PASAJE_MODEL.Store.DETALLE_DEPARTAMENTO_HORARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DETALLE_SOLICITUD_ASIENTO" EntityType="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_ASIENTO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DETALLE_SOLICITUD_RESERVA" EntityType="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_RESERVA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DOSIFICACION" EntityType="VENTAS_PASAJE_MODEL.Store.DOSIFICACION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EMPLEADO" EntityType="VENTAS_PASAJE_MODEL.Store.EMPLEADO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FACTURA" EntityType="VENTAS_PASAJE_MODEL.Store.FACTURA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HORARIO" EntityType="VENTAS_PASAJE_MODEL.Store.HORARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INFORMACION_PASAJE" EntityType="VENTAS_PASAJE_MODEL.Store.INFORMACION_PASAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ITINERARIO" EntityType="VENTAS_PASAJE_MODEL.Store.ITINERARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JURIDICO" EntityType="VENTAS_PASAJE_MODEL.Store.JURIDICO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NATURAL" EntityType="VENTAS_PASAJE_MODEL.Store.NATURAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SOLICITUD_PASAJE" EntityType="VENTAS_PASAJE_MODEL.Store.SOLICITUD_PASAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SOLICITUD_RESERVA" EntityType="VENTAS_PASAJE_MODEL.Store.SOLICITUD_RESERVA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="VENTAS_PASAJE_MODEL.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_BUS" EntityType="VENTAS_PASAJE_MODEL.Store.TIPO_BUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USUARIO" EntityType="VENTAS_PASAJE_MODEL.Store.USUARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_ASIENTO_CLIENTE" EntityType="VENTAS_PASAJE_MODEL.Store.V_ASIENTO_CLIENTE" store:Type="Views" store:Schema="dbo" store:Name="V_ASIENTO_CLIENTE">
+            <DefiningQuery>SELECT 
+      [V_ASIENTO_CLIENTE].[Id] AS [Id], 
+      [V_ASIENTO_CLIENTE].[NroAsiento] AS [NroAsiento], 
+      [V_ASIENTO_CLIENTE].[NombreCompleto] AS [NombreCompleto]
+      FROM [dbo].[V_ASIENTO_CLIENTE] AS [V_ASIENTO_CLIENTE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_BUSTIPO" EntityType="VENTAS_PASAJE_MODEL.Store.V_BUSTIPO" store:Type="Views" store:Schema="dbo" store:Name="V_BUSTIPO">
+            <DefiningQuery>SELECT 
+      [V_BUSTIPO].[Id] AS [Id], 
+      [V_BUSTIPO].[IdTipoBus] AS [IdTipoBus], 
+      [V_BUSTIPO].[Interno] AS [Interno], 
+      [V_BUSTIPO].[Placa] AS [Placa], 
+      [V_BUSTIPO].[Estado] AS [Estado], 
+      [V_BUSTIPO].[NroColumnas] AS [NroColumnas], 
+      [V_BUSTIPO].[Nombre] AS [Nombre]
+      FROM [dbo].[V_BUSTIPO] AS [V_BUSTIPO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_CLIENTE_GENERAL" EntityType="VENTAS_PASAJE_MODEL.Store.V_CLIENTE_GENERAL" store:Type="Views" store:Schema="dbo" store:Name="V_CLIENTE_GENERAL">
+            <DefiningQuery>SELECT 
+      [V_CLIENTE_GENERAL].[Id] AS [Id], 
+      [V_CLIENTE_GENERAL].[NIT] AS [NIT], 
+      [V_CLIENTE_GENERAL].[CI] AS [CI], 
+      [V_CLIENTE_GENERAL].[Nombre] AS [Nombre]
+      FROM [dbo].[V_CLIENTE_GENERAL] AS [V_CLIENTE_GENERAL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_CLIENTE_JURIDICO" EntityType="VENTAS_PASAJE_MODEL.Store.V_CLIENTE_JURIDICO" store:Type="Views" store:Schema="dbo" store:Name="V_CLIENTE_JURIDICO">
+            <DefiningQuery>SELECT 
+      [V_CLIENTE_JURIDICO].[Id] AS [Id], 
+      [V_CLIENTE_JURIDICO].[NIT] AS [NIT], 
+      [V_CLIENTE_JURIDICO].[RazonSocial] AS [RazonSocial]
+      FROM [dbo].[V_CLIENTE_JURIDICO] AS [V_CLIENTE_JURIDICO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_CLIENTE_NATURAL" EntityType="VENTAS_PASAJE_MODEL.Store.V_CLIENTE_NATURAL" store:Type="Views" store:Schema="dbo" store:Name="V_CLIENTE_NATURAL">
+            <DefiningQuery>SELECT 
+      [V_CLIENTE_NATURAL].[Id] AS [Id], 
+      [V_CLIENTE_NATURAL].[NIT] AS [NIT], 
+      [V_CLIENTE_NATURAL].[NombreCompleto] AS [NombreCompleto], 
+      [V_CLIENTE_NATURAL].[CI] AS [CI]
+      FROM [dbo].[V_CLIENTE_NATURAL] AS [V_CLIENTE_NATURAL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_DETALLE_VIAJE" EntityType="VENTAS_PASAJE_MODEL.Store.V_DETALLE_VIAJE" store:Type="Views" store:Schema="dbo" store:Name="V_DETALLE_VIAJE">
+            <DefiningQuery>SELECT 
+      [V_DETALLE_VIAJE].[Fecha] AS [Fecha], 
+      [V_DETALLE_VIAJE].[Nombre] AS [Nombre]
+      FROM [dbo].[V_DETALLE_VIAJE] AS [V_DETALLE_VIAJE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_EMPLEADO_USUARIO" EntityType="VENTAS_PASAJE_MODEL.Store.V_EMPLEADO_USUARIO" store:Type="Views" store:Schema="dbo" store:Name="V_EMPLEADO_USUARIO">
+            <DefiningQuery>SELECT 
+      [V_EMPLEADO_USUARIO].[Id] AS [Id], 
+      [V_EMPLEADO_USUARIO].[IdCargo] AS [IdCargo], 
+      [V_EMPLEADO_USUARIO].[CI] AS [CI], 
+      [V_EMPLEADO_USUARIO].[Nombre] AS [Nombre], 
+      [V_EMPLEADO_USUARIO].[ApellidoPaterno] AS [ApellidoPaterno], 
+      [V_EMPLEADO_USUARIO].[ApellidoMaterno] AS [ApellidoMaterno], 
+      [V_EMPLEADO_USUARIO].[FechaNacimiento] AS [FechaNacimiento], 
+      [V_EMPLEADO_USUARIO].[Genero] AS [Genero], 
+      [V_EMPLEADO_USUARIO].[Username] AS [Username], 
+      [V_EMPLEADO_USUARIO].[Password] AS [Password]
+      FROM [dbo].[V_EMPLEADO_USUARIO] AS [V_EMPLEADO_USUARIO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_FACTURA" EntityType="VENTAS_PASAJE_MODEL.Store.V_FACTURA" store:Type="Views" store:Schema="dbo" store:Name="V_FACTURA">
+            <DefiningQuery>SELECT 
+      [V_FACTURA].[IdFactura] AS [IdFactura], 
+      [V_FACTURA].[IdSolicitud] AS [IdSolicitud], 
+      [V_FACTURA].[IdCliente] AS [IdCliente], 
+      [V_FACTURA].[Interno] AS [Interno], 
+      [V_FACTURA].[Nombre] AS [Nombre], 
+      [V_FACTURA].[Hora] AS [Hora], 
+      [V_FACTURA].[MontoTotal] AS [MontoTotal], 
+      [V_FACTURA].[NIT] AS [NIT], 
+      [V_FACTURA].[CodigoControl] AS [CodigoControl], 
+      [V_FACTURA].[QR] AS [QR], 
+      [V_FACTURA].[NroAsiento] AS [NroAsiento], 
+      [V_FACTURA].[Cliente] AS [Cliente], 
+      [V_FACTURA].[Pasajero] AS [Pasajero]
+      FROM [dbo].[V_FACTURA] AS [V_FACTURA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_INFORMACION_HORARIO" EntityType="VENTAS_PASAJE_MODEL.Store.V_INFORMACION_HORARIO" store:Type="Views" store:Schema="dbo" store:Name="V_INFORMACION_HORARIO">
+            <DefiningQuery>SELECT 
+      [V_INFORMACION_HORARIO].[IdDepartamento] AS [IdDepartamento], 
+      [V_INFORMACION_HORARIO].[IdHorario] AS [IdHorario], 
+      [V_INFORMACION_HORARIO].[Nombre] AS [Nombre], 
+      [V_INFORMACION_HORARIO].[Hora] AS [Hora]
+      FROM [dbo].[V_INFORMACION_HORARIO] AS [V_INFORMACION_HORARIO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_INFORMACION_ITINERARIOS" EntityType="VENTAS_PASAJE_MODEL.Store.V_INFORMACION_ITINERARIOS" store:Type="Views" store:Schema="dbo" store:Name="V_INFORMACION_ITINERARIOS">
+            <DefiningQuery>SELECT 
+      [V_INFORMACION_ITINERARIOS].[IdItinerario] AS [IdItinerario], 
+      [V_INFORMACION_ITINERARIOS].[IdHorario] AS [IdHorario], 
+      [V_INFORMACION_ITINERARIOS].[IdDepartamento] AS [IdDepartamento], 
+      [V_INFORMACION_ITINERARIOS].[IdUsuario] AS [IdUsuario], 
+      [V_INFORMACION_ITINERARIOS].[Hora] AS [Hora], 
+      [V_INFORMACION_ITINERARIOS].[Departamento] AS [Departamento], 
+      [V_INFORMACION_ITINERARIOS].[Fecha] AS [Fecha], 
+      [V_INFORMACION_ITINERARIOS].[IdBus] AS [IdBus], 
+      [V_INFORMACION_ITINERARIOS].[Detalle] AS [Detalle], 
+      [V_INFORMACION_ITINERARIOS].[DetalleCompleto] AS [DetalleCompleto]
+      FROM [dbo].[V_INFORMACION_ITINERARIOS] AS [V_INFORMACION_ITINERARIOS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_ITINERARIO_BUS_ASIENTO" EntityType="VENTAS_PASAJE_MODEL.Store.V_ITINERARIO_BUS_ASIENTO" store:Type="Views" store:Schema="dbo" store:Name="V_ITINERARIO_BUS_ASIENTO">
+            <DefiningQuery>SELECT 
+      [V_ITINERARIO_BUS_ASIENTO].[IdDepartamento] AS [IdDepartamento], 
+      [V_ITINERARIO_BUS_ASIENTO].[Departamento] AS [Departamento], 
+      [V_ITINERARIO_BUS_ASIENTO].[IdItinerario] AS [IdItinerario], 
+      [V_ITINERARIO_BUS_ASIENTO].[Fecha] AS [Fecha], 
+      [V_ITINERARIO_BUS_ASIENTO].[IdBus] AS [IdBus], 
+      [V_ITINERARIO_BUS_ASIENTO].[Interno] AS [Interno], 
+      [V_ITINERARIO_BUS_ASIENTO].[Hora] AS [Hora], 
+      [V_ITINERARIO_BUS_ASIENTO].[IdAsiento] AS [IdAsiento], 
+      [V_ITINERARIO_BUS_ASIENTO].[Asiento] AS [Asiento], 
+      [V_ITINERARIO_BUS_ASIENTO].[NroAsiento] AS [NroAsiento], 
+      [V_ITINERARIO_BUS_ASIENTO].[TipoBus] AS [TipoBus], 
+      [V_ITINERARIO_BUS_ASIENTO].[NroColumnas] AS [NroColumnas], 
+      [V_ITINERARIO_BUS_ASIENTO].[Precio] AS [Precio]
+      FROM [dbo].[V_ITINERARIO_BUS_ASIENTO] AS [V_ITINERARIO_BUS_ASIENTO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_VENTA_EMPLEADO" EntityType="VENTAS_PASAJE_MODEL.Store.V_VENTA_EMPLEADO" store:Type="Views" store:Schema="dbo" store:Name="V_VENTA_EMPLEADO">
+            <DefiningQuery>SELECT 
+      [V_VENTA_EMPLEADO].[Id] AS [Id], 
+      [V_VENTA_EMPLEADO].[Empleado] AS [Empleado], 
+      [V_VENTA_EMPLEADO].[Fecha] AS [Fecha], 
+      [V_VENTA_EMPLEADO].[MontoTotal] AS [MontoTotal]
+      FROM [dbo].[V_VENTA_EMPLEADO] AS [V_VENTA_EMPLEADO]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__BUS__IdTipoBus__31EC6D26" Association="VENTAS_PASAJE_MODEL.Store.FK__BUS__IdTipoBus__31EC6D26">
+            <End Role="TIPO_BUS" EntitySet="TIPO_BUS" />
+            <End Role="BUS" EntitySet="BUS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAJA_USUA__IdCaj__2C3393D0" Association="VENTAS_PASAJE_MODEL.Store.FK__CAJA_USUA__IdCaj__2C3393D0">
+            <End Role="CAJA" EntitySet="CAJA" />
+            <End Role="CAJA_USUARIO" EntitySet="CAJA_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAJA_USUA__IdUsu__2D27B809" Association="VENTAS_PASAJE_MODEL.Store.FK__CAJA_USUA__IdUsu__2D27B809">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="CAJA_USUARIO" EntitySet="CAJA_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DETALLE_D__IdDep__1CF15040" Association="VENTAS_PASAJE_MODEL.Store.FK__DETALLE_D__IdDep__1CF15040">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DETALLE_D__IdHor__1DE57479" Association="VENTAS_PASAJE_MODEL.Store.FK__DETALLE_D__IdHor__1DE57479">
+            <End Role="HORARIO" EntitySet="HORARIO" />
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLEADO__IdCarg__239E4DCF" Association="VENTAS_PASAJE_MODEL.Store.FK__EMPLEADO__IdCarg__239E4DCF">
+            <End Role="CARGO" EntitySet="CARGO" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JURIDICO__Id__164452B1" Association="VENTAS_PASAJE_MODEL.Store.FK__JURIDICO__Id__164452B1">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="JURIDICO" EntitySet="JURIDICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NATURAL__Id__145C0A3F" Association="VENTAS_PASAJE_MODEL.Store.FK__NATURAL__Id__145C0A3F">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="NATURAL" EntitySet="NATURAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USUARIO__IdEmple__276EDEB3" Association="VENTAS_PASAJE_MODEL.Store.FK__USUARIO__IdEmple__276EDEB3">
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ASIENTO_BUS" Association="VENTAS_PASAJE_MODEL.Store.FK_ASIENTO_BUS">
+            <End Role="BUS" EntitySet="BUS" />
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO">
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO">
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE">
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_ASIENTO" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_RESERVA_ASIENTO">
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO">
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA" Association="VENTAS_PASAJE_MODEL.Store.FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA">
+            <End Role="SOLICITUD_RESERVA" EntitySet="SOLICITUD_RESERVA" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_DOSIFICACION" Association="VENTAS_PASAJE_MODEL.Store.FK_FACTURA_DOSIFICACION">
+            <End Role="DOSIFICACION" EntitySet="DOSIFICACION" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_SOLICITUD_PASAJE" Association="VENTAS_PASAJE_MODEL.Store.FK_FACTURA_SOLICITUD_PASAJE">
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_BUS" Association="VENTAS_PASAJE_MODEL.Store.FK_ITINERARIO_BUS">
+            <End Role="BUS" EntitySet="BUS" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO" Association="VENTAS_PASAJE_MODEL.Store.FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO">
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_USUARIO" Association="VENTAS_PASAJE_MODEL.Store.FK_ITINERARIO_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_PASAJE_CLIENTE1" Association="VENTAS_PASAJE_MODEL.Store.FK_SOLICITUD_PASAJE_CLIENTE1">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_PASAJE_EMPLEADO" Association="VENTAS_PASAJE_MODEL.Store.FK_SOLICITUD_PASAJE_EMPLEADO">
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_RESERVA_CLIENTE" Association="VENTAS_PASAJE_MODEL.Store.FK_SOLICITUD_RESERVA_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="SOLICITUD_RESERVA" EntitySet="SOLICITUD_RESERVA" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ASIENTO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdBus" Type="bigint" />
+          <Property Name="Asiento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NroAsiento" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AUXILIAR">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="PrecioMaximo" Type="decimal" Scale="2" />
+          <Property Name="PrecioMinimo" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="BUS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdTipoBus" Type="bigint" />
+          <Property Name="Interno" Type="int" Nullable="false" />
+          <Property Name="Placa" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CAJA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NroCaja" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CAJA_USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdCaja" Type="bigint" />
+          <Property Name="IdUsuario" Type="bigint" />
+          <Property Name="Hora" Type="time" Nullable="false" />
+          <Property Name="Monto" Type="decimal" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARGO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NIT" Type="int" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DETALLE_DEPARTAMENTO_HORARIO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdHorario" />
+          </Key>
+          <Property Name="IdDepartamento" Type="bigint" Nullable="false" />
+          <Property Name="IdHorario" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DETALLE_SOLICITUD_ASIENTO">
+          <Key>
+            <PropertyRef Name="IdSolicitudPasaje" />
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Name="IdSolicitudPasaje" Type="bigint" Nullable="false" />
+          <Property Name="IdAsiento" Type="bigint" Nullable="false" />
+          <Property Name="IdCliente" Type="bigint" />
+          <Property Name="IdItinerario" Type="bigint" />
+        </EntityType>
+        <EntityType Name="DETALLE_SOLICITUD_RESERVA">
+          <Key>
+            <PropertyRef Name="IdSolicitudReserva" />
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Name="IdSolicitudReserva" Type="bigint" Nullable="false" />
+          <Property Name="IdAsiento" Type="bigint" Nullable="false" />
+          <Property Name="IdItinerario" Type="bigint" />
+        </EntityType>
+        <EntityType Name="DOSIFICACION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NroTramite" Type="int" />
+          <Property Name="NroIncial" Type="int" />
+          <Property Name="NroFinal" Type="int" />
+          <Property Name="Llave" Type="varchar" MaxLength="200" />
+          <Property Name="FechaVencimiento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EMPLEADO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdCargo" Type="bigint" />
+          <Property Name="CI" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdSolicitudPasaje" Type="bigint" />
+          <Property Name="IdDosificacion" Type="bigint" />
+          <Property Name="NroFactura" Type="int" />
+          <Property Name="CodigoControl" Type="varchar" MaxLength="20" />
+          <Property Name="QR" Type="varbinary(max)" />
+          <Property Name="MontoTotal" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HORARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Hora" Type="time" Nullable="false" Precision="2" />
+        </EntityType>
+        <EntityType Name="INFORMACION_PASAJE">
+          <Key>
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Name="IdAsiento" Type="bigint" Nullable="false" />
+          <Property Name="NroAsiento" Type="int" />
+          <Property Name="IdCliente" Type="bigint" Nullable="false" />
+          <Property Name="CI" Type="int" />
+          <Property Name="Cliente" Type="varchar" MaxLength="50" />
+          <Property Name="Precio" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="ITINERARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdBus" Type="bigint" Nullable="false" />
+          <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+          <Property Name="IdDepartamento" Type="bigint" Nullable="false" />
+          <Property Name="IdHorario" Type="bigint" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="JURIDICO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="NATURAL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="CI" Type="bigint" />
+          <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SOLICITUD_PASAJE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdCliente" Type="bigint" Nullable="false" />
+          <Property Name="IdEmpleado" Type="bigint" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="MontoTotal" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="SOLICITUD_RESERVA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdCliente" Type="bigint" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="MontoTotal" Type="float" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TIPO_BUS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NroColumnas" Type="int" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdEmpleado" Type="bigint" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_ASIENTO_CLIENTE' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_ASIENTO_CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="NombreCompleto" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NroAsiento" Type="int" Nullable="false" />
+          <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_BUSTIPO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_BUSTIPO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Placa" />
+            <PropertyRef Name="Estado" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdTipoBus" Type="bigint" />
+          <Property Name="Interno" Type="int" Nullable="false" />
+          <Property Name="Placa" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+          <Property Name="NroColumnas" Type="int" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_CLIENTE_GENERAL' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_CLIENTE_GENERAL">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NIT" Type="int" />
+          <Property Name="CI" Type="bigint" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_CLIENTE_JURIDICO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_CLIENTE_JURIDICO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="RazonSocial" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NIT" Type="int" />
+          <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_CLIENTE_NATURAL' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_CLIENTE_NATURAL">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NombreCompleto" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="NIT" Type="int" />
+          <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CI" Type="bigint" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_DETALLE_VIAJE' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_DETALLE_VIAJE">
+          <Key>
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_EMPLEADO_USUARIO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_EMPLEADO_USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="CI" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="FechaNacimiento" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="IdCargo" Type="bigint" />
+          <Property Name="CI" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_FACTURA' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_FACTURA">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+            <PropertyRef Name="IdSolicitud" />
+            <PropertyRef Name="IdCliente" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="Cliente" />
+            <PropertyRef Name="Pasajero" />
+          </Key>
+          <Property Name="IdFactura" Type="bigint" Nullable="false" />
+          <Property Name="IdSolicitud" Type="bigint" Nullable="false" />
+          <Property Name="IdCliente" Type="bigint" Nullable="false" />
+          <Property Name="Interno" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Hora" Type="time" Nullable="false" Precision="2" />
+          <Property Name="MontoTotal" Type="decimal" Scale="2" />
+          <Property Name="NIT" Type="int" />
+          <Property Name="CodigoControl" Type="varchar" MaxLength="20" />
+          <Property Name="QR" Type="varbinary(max)" />
+          <Property Name="NroAsiento" Type="int" Nullable="false" />
+          <Property Name="Cliente" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Pasajero" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_INFORMACION_HORARIO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_INFORMACION_HORARIO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdHorario" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Hora" />
+          </Key>
+          <Property Name="IdDepartamento" Type="bigint" Nullable="false" />
+          <Property Name="IdHorario" Type="bigint" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Hora" Type="time" Nullable="false" Precision="2" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_INFORMACION_ITINERARIOS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_INFORMACION_ITINERARIOS">
+          <Key>
+            <PropertyRef Name="IdItinerario" />
+            <PropertyRef Name="IdHorario" />
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="Departamento" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="IdBus" />
+            <PropertyRef Name="Detalle" />
+            <PropertyRef Name="DetalleCompleto" />
+          </Key>
+          <Property Name="IdItinerario" Type="bigint" Nullable="false" />
+          <Property Name="IdHorario" Type="bigint" Nullable="false" />
+          <Property Name="IdDepartamento" Type="bigint" Nullable="false" />
+          <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+          <Property Name="Hora" Type="time" Nullable="false" Precision="2" />
+          <Property Name="Departamento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="IdBus" Type="bigint" Nullable="false" />
+          <Property Name="Detalle" Type="varchar" Nullable="false" MaxLength="76" />
+          <Property Name="DetalleCompleto" Type="varchar" Nullable="false" MaxLength="108" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_ITINERARIO_BUS_ASIENTO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_ITINERARIO_BUS_ASIENTO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="Departamento" />
+            <PropertyRef Name="IdItinerario" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="IdBus" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="IdAsiento" />
+            <PropertyRef Name="Asiento" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="TipoBus" />
+            <PropertyRef Name="Precio" />
+          </Key>
+          <Property Name="IdDepartamento" Type="bigint" Nullable="false" />
+          <Property Name="Departamento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdItinerario" Type="bigint" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="IdBus" Type="bigint" Nullable="false" />
+          <Property Name="Interno" Type="int" Nullable="false" />
+          <Property Name="Hora" Type="time" Nullable="false" Precision="2" />
+          <Property Name="IdAsiento" Type="bigint" Nullable="false" />
+          <Property Name="Asiento" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NroAsiento" Type="int" Nullable="false" />
+          <Property Name="TipoBus" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NroColumnas" Type="int" />
+          <Property Name="Precio" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'VENTAS_PASAJE.dbo.V_VENTA_EMPLEADO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_VENTA_EMPLEADO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Empleado" />
+            <PropertyRef Name="Fecha" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Empleado" Type="varchar" Nullable="false" MaxLength="152" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="MontoTotal" Type="decimal" Scale="2" />
+        </EntityType>
+        <Association Name="FK__BUS__IdTipoBus__31EC6D26">
+          <End Role="TIPO_BUS" Type="VENTAS_PASAJE_MODEL.Store.TIPO_BUS" Multiplicity="0..1" />
+          <End Role="BUS" Type="VENTAS_PASAJE_MODEL.Store.BUS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BUS">
+              <PropertyRef Name="IdTipoBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAJA_USUA__IdCaj__2C3393D0">
+          <End Role="CAJA" Type="VENTAS_PASAJE_MODEL.Store.CAJA" Multiplicity="0..1" />
+          <End Role="CAJA_USUARIO" Type="VENTAS_PASAJE_MODEL.Store.CAJA_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAJA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CAJA_USUARIO">
+              <PropertyRef Name="IdCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAJA_USUA__IdUsu__2D27B809">
+          <End Role="USUARIO" Type="VENTAS_PASAJE_MODEL.Store.USUARIO" Multiplicity="0..1" />
+          <End Role="CAJA_USUARIO" Type="VENTAS_PASAJE_MODEL.Store.CAJA_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CAJA_USUARIO">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DETALLE_D__IdDep__1CF15040">
+          <End Role="DEPARTAMENTO" Type="VENTAS_PASAJE_MODEL.Store.DEPARTAMENTO" Multiplicity="1" />
+          <End Role="DETALLE_DEPARTAMENTO_HORARIO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DETALLE_D__IdHor__1DE57479">
+          <End Role="HORARIO" Type="VENTAS_PASAJE_MODEL.Store.HORARIO" Multiplicity="1" />
+          <End Role="DETALLE_DEPARTAMENTO_HORARIO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HORARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLEADO__IdCarg__239E4DCF">
+          <End Role="CARGO" Type="VENTAS_PASAJE_MODEL.Store.CARGO" Multiplicity="0..1" />
+          <End Role="EMPLEADO" Type="VENTAS_PASAJE_MODEL.Store.EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARGO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JURIDICO__Id__164452B1">
+          <End Role="CLIENTE" Type="VENTAS_PASAJE_MODEL.Store.CLIENTE" Multiplicity="1" />
+          <End Role="JURIDICO" Type="VENTAS_PASAJE_MODEL.Store.JURIDICO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JURIDICO">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NATURAL__Id__145C0A3F">
+          <End Role="CLIENTE" Type="VENTAS_PASAJE_MODEL.Store.CLIENTE" Multiplicity="1" />
+          <End Role="NATURAL" Type="VENTAS_PASAJE_MODEL.Store.NATURAL" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NATURAL">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USUARIO__IdEmple__276EDEB3">
+          <End Role="EMPLEADO" Type="VENTAS_PASAJE_MODEL.Store.EMPLEADO" Multiplicity="0..1" />
+          <End Role="USUARIO" Type="VENTAS_PASAJE_MODEL.Store.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="IdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ASIENTO_BUS">
+          <End Role="BUS" Type="VENTAS_PASAJE_MODEL.Store.BUS" Multiplicity="0..1" />
+          <End Role="ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ASIENTO">
+              <PropertyRef Name="IdBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO">
+          <End Role="ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.ASIENTO" Multiplicity="1" />
+          <End Role="DETALLE_SOLICITUD_ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASIENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdAsiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE">
+          <End Role="CLIENTE" Type="VENTAS_PASAJE_MODEL.Store.CLIENTE" Multiplicity="0..1" />
+          <End Role="DETALLE_SOLICITUD_ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO">
+          <End Role="ITINERARIO" Type="VENTAS_PASAJE_MODEL.Store.ITINERARIO" Multiplicity="0..1" />
+          <End Role="DETALLE_SOLICITUD_ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITINERARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdItinerario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE">
+          <End Role="SOLICITUD_PASAJE" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_PASAJE" Multiplicity="1" />
+          <End Role="DETALLE_SOLICITUD_ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdSolicitudPasaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_ASIENTO">
+          <End Role="ASIENTO" Type="VENTAS_PASAJE_MODEL.Store.ASIENTO" Multiplicity="1" />
+          <End Role="DETALLE_SOLICITUD_RESERVA" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASIENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdAsiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO">
+          <End Role="ITINERARIO" Type="VENTAS_PASAJE_MODEL.Store.ITINERARIO" Multiplicity="0..1" />
+          <End Role="DETALLE_SOLICITUD_RESERVA" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITINERARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdItinerario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA">
+          <End Role="SOLICITUD_RESERVA" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_RESERVA" Multiplicity="1" />
+          <End Role="DETALLE_SOLICITUD_RESERVA" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_RESERVA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdSolicitudReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_DOSIFICACION">
+          <End Role="DOSIFICACION" Type="VENTAS_PASAJE_MODEL.Store.DOSIFICACION" Multiplicity="0..1" />
+          <End Role="FACTURA" Type="VENTAS_PASAJE_MODEL.Store.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOSIFICACION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="IdDosificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_SOLICITUD_PASAJE">
+          <End Role="SOLICITUD_PASAJE" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_PASAJE" Multiplicity="0..1" />
+          <End Role="FACTURA" Type="VENTAS_PASAJE_MODEL.Store.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="IdSolicitudPasaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_BUS">
+          <End Role="BUS" Type="VENTAS_PASAJE_MODEL.Store.BUS" Multiplicity="1" />
+          <End Role="ITINERARIO" Type="VENTAS_PASAJE_MODEL.Store.ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO">
+          <End Role="DETALLE_DEPARTAMENTO_HORARIO" Type="VENTAS_PASAJE_MODEL.Store.DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="1" />
+          <End Role="ITINERARIO" Type="VENTAS_PASAJE_MODEL.Store.ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdDepartamento" />
+              <PropertyRef Name="IdHorario" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdDepartamento" />
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_USUARIO">
+          <End Role="USUARIO" Type="VENTAS_PASAJE_MODEL.Store.USUARIO" Multiplicity="1" />
+          <End Role="ITINERARIO" Type="VENTAS_PASAJE_MODEL.Store.ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_PASAJE_CLIENTE1">
+          <End Role="CLIENTE" Type="VENTAS_PASAJE_MODEL.Store.CLIENTE" Multiplicity="1" />
+          <End Role="SOLICITUD_PASAJE" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_PASAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_PASAJE_EMPLEADO">
+          <End Role="EMPLEADO" Type="VENTAS_PASAJE_MODEL.Store.EMPLEADO" Multiplicity="0..1" />
+          <End Role="SOLICITUD_PASAJE" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_PASAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="IdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_RESERVA_CLIENTE">
+          <End Role="CLIENTE" Type="VENTAS_PASAJE_MODEL.Store.CLIENTE" Multiplicity="0..1" />
+          <End Role="SOLICITUD_RESERVA" Type="VENTAS_PASAJE_MODEL.Store.SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_RESERVA">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VENTAS_PASAJE_MODEL" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VENTAS_PASAJE_ENTITIES" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(VENTAS_PASAJE_MODEL.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(VENTAS_PASAJE_MODEL.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="ASIENTO" EntityType="VENTAS_PASAJE_MODEL.ASIENTO" />
+          <EntitySet Name="AUXILIAR" EntityType="VENTAS_PASAJE_MODEL.AUXILIAR" />
+          <EntitySet Name="BUS" EntityType="VENTAS_PASAJE_MODEL.BUS" />
+          <EntitySet Name="CAJA" EntityType="VENTAS_PASAJE_MODEL.CAJA" />
+          <EntitySet Name="CAJA_USUARIO" EntityType="VENTAS_PASAJE_MODEL.CAJA_USUARIO" />
+          <EntitySet Name="CARGO" EntityType="VENTAS_PASAJE_MODEL.CARGO" />
+          <EntitySet Name="CLIENTE" EntityType="VENTAS_PASAJE_MODEL.CLIENTE" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="VENTAS_PASAJE_MODEL.DEPARTAMENTO" />
+          <EntitySet Name="DETALLE_DEPARTAMENTO_HORARIO" EntityType="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO" />
+          <EntitySet Name="DETALLE_SOLICITUD_ASIENTO" EntityType="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" />
+          <EntitySet Name="DETALLE_SOLICITUD_RESERVA" EntityType="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA" />
+          <EntitySet Name="DOSIFICACION" EntityType="VENTAS_PASAJE_MODEL.DOSIFICACION" />
+          <EntitySet Name="EMPLEADO" EntityType="VENTAS_PASAJE_MODEL.EMPLEADO" />
+          <EntitySet Name="FACTURA" EntityType="VENTAS_PASAJE_MODEL.FACTURA" />
+          <EntitySet Name="HORARIO" EntityType="VENTAS_PASAJE_MODEL.HORARIO" />
+          <EntitySet Name="INFORMACION_PASAJE" EntityType="VENTAS_PASAJE_MODEL.INFORMACION_PASAJE" />
+          <EntitySet Name="ITINERARIO" EntityType="VENTAS_PASAJE_MODEL.ITINERARIO" />
+          <EntitySet Name="JURIDICO" EntityType="VENTAS_PASAJE_MODEL.JURIDICO" />
+          <EntitySet Name="NATURAL" EntityType="VENTAS_PASAJE_MODEL.NATURAL" />
+          <EntitySet Name="SOLICITUD_PASAJE" EntityType="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" />
+          <EntitySet Name="SOLICITUD_RESERVA" EntityType="VENTAS_PASAJE_MODEL.SOLICITUD_RESERVA" />
+          <EntitySet Name="sysdiagrams" EntityType="VENTAS_PASAJE_MODEL.sysdiagrams" />
+          <EntitySet Name="TIPO_BUS" EntityType="VENTAS_PASAJE_MODEL.TIPO_BUS" />
+          <EntitySet Name="USUARIO" EntityType="VENTAS_PASAJE_MODEL.USUARIO" />
+          <EntitySet Name="V_ASIENTO_CLIENTE" EntityType="VENTAS_PASAJE_MODEL.V_ASIENTO_CLIENTE" />
+          <EntitySet Name="V_BUSTIPO" EntityType="VENTAS_PASAJE_MODEL.V_BUSTIPO" />
+          <EntitySet Name="V_CLIENTE_GENERAL" EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_GENERAL" />
+          <EntitySet Name="V_CLIENTE_JURIDICO" EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_JURIDICO" />
+          <EntitySet Name="V_CLIENTE_NATURAL" EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_NATURAL" />
+          <EntitySet Name="V_DETALLE_VIAJE" EntityType="VENTAS_PASAJE_MODEL.V_DETALLE_VIAJE" />
+          <EntitySet Name="V_EMPLEADO_USUARIO" EntityType="VENTAS_PASAJE_MODEL.V_EMPLEADO_USUARIO" />
+          <EntitySet Name="V_FACTURA" EntityType="VENTAS_PASAJE_MODEL.V_FACTURA" />
+          <EntitySet Name="V_INFORMACION_HORARIO" EntityType="VENTAS_PASAJE_MODEL.V_INFORMACION_HORARIO" />
+          <EntitySet Name="V_INFORMACION_ITINERARIOS" EntityType="VENTAS_PASAJE_MODEL.V_INFORMACION_ITINERARIOS" />
+          <EntitySet Name="V_ITINERARIO_BUS_ASIENTO" EntityType="VENTAS_PASAJE_MODEL.V_ITINERARIO_BUS_ASIENTO" />
+          <AssociationSet Name="FK_ASIENTO_BUS" Association="VENTAS_PASAJE_MODEL.FK_ASIENTO_BUS">
+            <End Role="BUS" EntitySet="BUS" />
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO">
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_ASIENTO" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ASIENTO">
+            <End Role="ASIENTO" EntitySet="ASIENTO" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BUS__IdTipoBus__31EC6D26" Association="VENTAS_PASAJE_MODEL.FK__BUS__IdTipoBus__31EC6D26">
+            <End Role="TIPO_BUS" EntitySet="TIPO_BUS" />
+            <End Role="BUS" EntitySet="BUS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_BUS" Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_BUS">
+            <End Role="BUS" EntitySet="BUS" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAJA_USUA__IdCaj__2C3393D0" Association="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdCaj__2C3393D0">
+            <End Role="CAJA" EntitySet="CAJA" />
+            <End Role="CAJA_USUARIO" EntitySet="CAJA_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAJA_USUA__IdUsu__2D27B809" Association="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdUsu__2D27B809">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="CAJA_USUARIO" EntitySet="CAJA_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLEADO__IdCarg__239E4DCF" Association="VENTAS_PASAJE_MODEL.FK__EMPLEADO__IdCarg__239E4DCF">
+            <End Role="CARGO" EntitySet="CARGO" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JURIDICO__Id__164452B1" Association="VENTAS_PASAJE_MODEL.FK__JURIDICO__Id__164452B1">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="JURIDICO" EntitySet="JURIDICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NATURAL__Id__145C0A3F" Association="VENTAS_PASAJE_MODEL.FK__NATURAL__Id__145C0A3F">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="NATURAL" EntitySet="NATURAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_PASAJE_CLIENTE1" Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_CLIENTE1">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_RESERVA_CLIENTE" Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_RESERVA_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="SOLICITUD_RESERVA" EntitySet="SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DETALLE_D__IdDep__1CF15040" Association="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdDep__1CF15040">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DETALLE_D__IdHor__1DE57479" Association="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdHor__1DE57479">
+            <End Role="HORARIO" EntitySet="HORARIO" />
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO" Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO">
+            <End Role="DETALLE_DEPARTAMENTO_HORARIO" EntitySet="DETALLE_DEPARTAMENTO_HORARIO" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO">
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE">
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+            <End Role="DETALLE_SOLICITUD_ASIENTO" EntitySet="DETALLE_SOLICITUD_ASIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO">
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA" Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA">
+            <End Role="SOLICITUD_RESERVA" EntitySet="SOLICITUD_RESERVA" />
+            <End Role="DETALLE_SOLICITUD_RESERVA" EntitySet="DETALLE_SOLICITUD_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_DOSIFICACION" Association="VENTAS_PASAJE_MODEL.FK_FACTURA_DOSIFICACION">
+            <End Role="DOSIFICACION" EntitySet="DOSIFICACION" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USUARIO__IdEmple__276EDEB3" Association="VENTAS_PASAJE_MODEL.FK__USUARIO__IdEmple__276EDEB3">
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLICITUD_PASAJE_EMPLEADO" Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_EMPLEADO">
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_SOLICITUD_PASAJE" Association="VENTAS_PASAJE_MODEL.FK_FACTURA_SOLICITUD_PASAJE">
+            <End Role="SOLICITUD_PASAJE" EntitySet="SOLICITUD_PASAJE" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITINERARIO_USUARIO" Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+          </AssociationSet>
+          <EntitySet Name="V_VENTA_EMPLEADO" EntityType="VENTAS_PASAJE_MODEL.V_VENTA_EMPLEADO" />
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="ASIENTO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdBus" />
+          <Property Type="String" Name="Asiento1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NroAsiento" Nullable="false" />
+          <NavigationProperty Name="BUS" Relationship="VENTAS_PASAJE_MODEL.FK_ASIENTO_BUS" FromRole="ASIENTO" ToRole="BUS" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO" FromRole="ASIENTO" ToRole="DETALLE_SOLICITUD_ASIENTO" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_RESERVA" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ASIENTO" FromRole="ASIENTO" ToRole="DETALLE_SOLICITUD_RESERVA" />
+        </EntityType>
+        <EntityType Name="AUXILIAR">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Decimal" Name="PrecioMaximo" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="PrecioMinimo" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="BUS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdTipoBus" />
+          <Property Type="Int32" Name="Interno" Nullable="false" />
+          <Property Type="String" Name="Placa" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <NavigationProperty Name="ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_ASIENTO_BUS" FromRole="BUS" ToRole="ASIENTO" />
+          <NavigationProperty Name="TIPO_BUS" Relationship="VENTAS_PASAJE_MODEL.FK__BUS__IdTipoBus__31EC6D26" FromRole="BUS" ToRole="TIPO_BUS" />
+          <NavigationProperty Name="ITINERARIO" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_BUS" FromRole="BUS" ToRole="ITINERARIO" />
+        </EntityType>
+        <EntityType Name="CAJA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="NroCaja" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CAJA_USUARIO" Relationship="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdCaj__2C3393D0" FromRole="CAJA" ToRole="CAJA_USUARIO" />
+        </EntityType>
+        <EntityType Name="CAJA_USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdCaja" />
+          <Property Type="Int64" Name="IdUsuario" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="7" />
+          <Property Type="Decimal" Name="Monto" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="Estado" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CAJA" Relationship="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdCaj__2C3393D0" FromRole="CAJA_USUARIO" ToRole="CAJA" />
+          <NavigationProperty Name="USUARIO" Relationship="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdUsu__2D27B809" FromRole="CAJA_USUARIO" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="CARGO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPLEADO" Relationship="VENTAS_PASAJE_MODEL.FK__EMPLEADO__IdCarg__239E4DCF" FromRole="CARGO" ToRole="EMPLEADO" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NIT" />
+          <NavigationProperty Name="JURIDICO" Relationship="VENTAS_PASAJE_MODEL.FK__JURIDICO__Id__164452B1" FromRole="CLIENTE" ToRole="JURIDICO" />
+          <NavigationProperty Name="NATURAL" Relationship="VENTAS_PASAJE_MODEL.FK__NATURAL__Id__145C0A3F" FromRole="CLIENTE" ToRole="NATURAL" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE" FromRole="CLIENTE" ToRole="DETALLE_SOLICITUD_ASIENTO" />
+          <NavigationProperty Name="SOLICITUD_PASAJE" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_CLIENTE1" FromRole="CLIENTE" ToRole="SOLICITUD_PASAJE" />
+          <NavigationProperty Name="SOLICITUD_RESERVA" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_RESERVA_CLIENTE" FromRole="CLIENTE" ToRole="SOLICITUD_RESERVA" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DETALLE_DEPARTAMENTO_HORARIO" Relationship="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdDep__1CF15040" FromRole="DEPARTAMENTO" ToRole="DETALLE_DEPARTAMENTO_HORARIO" />
+        </EntityType>
+        <EntityType Name="DETALLE_DEPARTAMENTO_HORARIO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdHorario" />
+          </Key>
+          <Property Type="Int64" Name="IdDepartamento" Nullable="false" />
+          <Property Type="Int64" Name="IdHorario" Nullable="false" />
+          <NavigationProperty Name="DEPARTAMENTO" Relationship="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdDep__1CF15040" FromRole="DETALLE_DEPARTAMENTO_HORARIO" ToRole="DEPARTAMENTO" />
+          <NavigationProperty Name="HORARIO" Relationship="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdHor__1DE57479" FromRole="DETALLE_DEPARTAMENTO_HORARIO" ToRole="HORARIO" />
+          <NavigationProperty Name="ITINERARIO" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO" FromRole="DETALLE_DEPARTAMENTO_HORARIO" ToRole="ITINERARIO" />
+        </EntityType>
+        <EntityType Name="DETALLE_SOLICITUD_ASIENTO">
+          <Key>
+            <PropertyRef Name="IdSolicitudPasaje" />
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Type="Int64" Name="IdSolicitudPasaje" Nullable="false" />
+          <Property Type="Int64" Name="IdAsiento" Nullable="false" />
+          <Property Type="Int64" Name="IdCliente" />
+          <Property Type="Int64" Name="IdItinerario" />
+          <NavigationProperty Name="ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO" FromRole="DETALLE_SOLICITUD_ASIENTO" ToRole="ASIENTO" />
+          <NavigationProperty Name="CLIENTE" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE" FromRole="DETALLE_SOLICITUD_ASIENTO" ToRole="CLIENTE" />
+          <NavigationProperty Name="ITINERARIO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO" FromRole="DETALLE_SOLICITUD_ASIENTO" ToRole="ITINERARIO" />
+          <NavigationProperty Name="SOLICITUD_PASAJE" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE" FromRole="DETALLE_SOLICITUD_ASIENTO" ToRole="SOLICITUD_PASAJE" />
+        </EntityType>
+        <EntityType Name="DETALLE_SOLICITUD_RESERVA">
+          <Key>
+            <PropertyRef Name="IdSolicitudReserva" />
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Type="Int64" Name="IdSolicitudReserva" Nullable="false" />
+          <Property Type="Int64" Name="IdAsiento" Nullable="false" />
+          <Property Type="Int64" Name="IdItinerario" />
+          <NavigationProperty Name="ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ASIENTO" FromRole="DETALLE_SOLICITUD_RESERVA" ToRole="ASIENTO" />
+          <NavigationProperty Name="ITINERARIO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO" FromRole="DETALLE_SOLICITUD_RESERVA" ToRole="ITINERARIO" />
+          <NavigationProperty Name="SOLICITUD_RESERVA" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA" FromRole="DETALLE_SOLICITUD_RESERVA" ToRole="SOLICITUD_RESERVA" />
+        </EntityType>
+        <EntityType Name="DOSIFICACION">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NroTramite" />
+          <Property Type="Int32" Name="NroIncial" />
+          <Property Type="Int32" Name="NroFinal" />
+          <Property Type="String" Name="Llave" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaVencimiento" Precision="3" />
+          <NavigationProperty Name="FACTURA" Relationship="VENTAS_PASAJE_MODEL.FK_FACTURA_DOSIFICACION" FromRole="DOSIFICACION" ToRole="FACTURA" />
+        </EntityType>
+        <EntityType Name="EMPLEADO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdCargo" />
+          <Property Type="Int32" Name="CI" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoPaterno" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoMaterno" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Genero" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="CARGO" Relationship="VENTAS_PASAJE_MODEL.FK__EMPLEADO__IdCarg__239E4DCF" FromRole="EMPLEADO" ToRole="CARGO" />
+          <NavigationProperty Name="USUARIO" Relationship="VENTAS_PASAJE_MODEL.FK__USUARIO__IdEmple__276EDEB3" FromRole="EMPLEADO" ToRole="USUARIO" />
+          <NavigationProperty Name="SOLICITUD_PASAJE" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_EMPLEADO" FromRole="EMPLEADO" ToRole="SOLICITUD_PASAJE" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdSolicitudPasaje" />
+          <Property Type="Int64" Name="IdDosificacion" />
+          <Property Type="Int32" Name="NroFactura" />
+          <Property Type="String" Name="CodigoControl" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="QR" MaxLength="Max" FixedLength="false" />
+          <Property Type="Decimal" Name="MontoTotal" Precision="18" Scale="2" />
+          <NavigationProperty Name="DOSIFICACION" Relationship="VENTAS_PASAJE_MODEL.FK_FACTURA_DOSIFICACION" FromRole="FACTURA" ToRole="DOSIFICACION" />
+          <NavigationProperty Name="SOLICITUD_PASAJE" Relationship="VENTAS_PASAJE_MODEL.FK_FACTURA_SOLICITUD_PASAJE" FromRole="FACTURA" ToRole="SOLICITUD_PASAJE" />
+        </EntityType>
+        <EntityType Name="HORARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="2" />
+          <NavigationProperty Name="DETALLE_DEPARTAMENTO_HORARIO" Relationship="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdHor__1DE57479" FromRole="HORARIO" ToRole="DETALLE_DEPARTAMENTO_HORARIO" />
+        </EntityType>
+        <EntityType Name="INFORMACION_PASAJE">
+          <Key>
+            <PropertyRef Name="IdAsiento" />
+          </Key>
+          <Property Type="Int64" Name="IdAsiento" Nullable="false" />
+          <Property Type="Int32" Name="NroAsiento" />
+          <Property Type="Int64" Name="IdCliente" Nullable="false" />
+          <Property Type="Int32" Name="CI" />
+          <Property Type="String" Name="Cliente" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Precio" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="ITINERARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdBus" Nullable="false" />
+          <Property Type="Int64" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int64" Name="IdDepartamento" Nullable="false" />
+          <Property Type="Int64" Name="IdHorario" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="Precio" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="BUS" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_BUS" FromRole="ITINERARIO" ToRole="BUS" />
+          <NavigationProperty Name="DETALLE_DEPARTAMENTO_HORARIO" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO" FromRole="ITINERARIO" ToRole="DETALLE_DEPARTAMENTO_HORARIO" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO" FromRole="ITINERARIO" ToRole="DETALLE_SOLICITUD_ASIENTO" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_RESERVA" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO" FromRole="ITINERARIO" ToRole="DETALLE_SOLICITUD_RESERVA" />
+          <NavigationProperty Name="USUARIO" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_USUARIO" FromRole="ITINERARIO" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="JURIDICO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="VENTAS_PASAJE_MODEL.FK__JURIDICO__Id__164452B1" FromRole="JURIDICO" ToRole="CLIENTE" />
+        </EntityType>
+        <EntityType Name="NATURAL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="CI" />
+          <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="VENTAS_PASAJE_MODEL.FK__NATURAL__Id__145C0A3F" FromRole="NATURAL" ToRole="CLIENTE" />
+        </EntityType>
+        <EntityType Name="SOLICITUD_PASAJE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdCliente" Nullable="false" />
+          <Property Type="Int64" Name="IdEmpleado" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="MontoTotal" Precision="18" Scale="2" />
+          <NavigationProperty Name="CLIENTE" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_CLIENTE1" FromRole="SOLICITUD_PASAJE" ToRole="CLIENTE" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_ASIENTO" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE" FromRole="SOLICITUD_PASAJE" ToRole="DETALLE_SOLICITUD_ASIENTO" />
+          <NavigationProperty Name="EMPLEADO" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_EMPLEADO" FromRole="SOLICITUD_PASAJE" ToRole="EMPLEADO" />
+          <NavigationProperty Name="FACTURA" Relationship="VENTAS_PASAJE_MODEL.FK_FACTURA_SOLICITUD_PASAJE" FromRole="SOLICITUD_PASAJE" ToRole="FACTURA" />
+        </EntityType>
+        <EntityType Name="SOLICITUD_RESERVA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdCliente" />
+          <Property Type="DateTime" Name="Fecha" Precision="3" />
+          <Property Type="Int32" Name="Estado" />
+          <Property Type="Double" Name="MontoTotal" />
+          <NavigationProperty Name="CLIENTE" Relationship="VENTAS_PASAJE_MODEL.FK_SOLICITUD_RESERVA_CLIENTE" FromRole="SOLICITUD_RESERVA" ToRole="CLIENTE" />
+          <NavigationProperty Name="DETALLE_SOLICITUD_RESERVA" Relationship="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA" FromRole="SOLICITUD_RESERVA" ToRole="DETALLE_SOLICITUD_RESERVA" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TIPO_BUS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NroColumnas" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BUS" Relationship="VENTAS_PASAJE_MODEL.FK__BUS__IdTipoBus__31EC6D26" FromRole="TIPO_BUS" ToRole="BUS" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdEmpleado" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CAJA_USUARIO" Relationship="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdUsu__2D27B809" FromRole="USUARIO" ToRole="CAJA_USUARIO" />
+          <NavigationProperty Name="EMPLEADO" Relationship="VENTAS_PASAJE_MODEL.FK__USUARIO__IdEmple__276EDEB3" FromRole="USUARIO" ToRole="EMPLEADO" />
+          <NavigationProperty Name="ITINERARIO" Relationship="VENTAS_PASAJE_MODEL.FK_ITINERARIO_USUARIO" FromRole="USUARIO" ToRole="ITINERARIO" />
+        </EntityType>
+        <EntityType Name="V_ASIENTO_CLIENTE">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="NombreCompleto" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NroAsiento" Nullable="false" />
+          <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_BUSTIPO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Placa" />
+            <PropertyRef Name="Estado" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdTipoBus" />
+          <Property Type="Int32" Name="Interno" Nullable="false" />
+          <Property Type="String" Name="Placa" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="Int32" Name="NroColumnas" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_CLIENTE_GENERAL">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NIT" />
+          <Property Type="Int64" Name="CI" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_CLIENTE_JURIDICO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="RazonSocial" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NIT" />
+          <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_CLIENTE_NATURAL">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="NombreCompleto" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="NIT" />
+          <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="CI" />
+        </EntityType>
+        <EntityType Name="V_DETALLE_VIAJE">
+          <Key>
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="Nombre" />
+          </Key>
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_EMPLEADO_USUARIO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="CI" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="FechaNacimiento" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="IdCargo" />
+          <Property Type="Int32" Name="CI" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoPaterno" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ApellidoMaterno" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="3" />
+          <Property Type="String" Name="Genero" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_FACTURA">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+            <PropertyRef Name="IdSolicitud" />
+            <PropertyRef Name="IdCliente" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="Cliente" />
+            <PropertyRef Name="Pasajero" />
+          </Key>
+          <Property Type="Int64" Name="IdFactura" Nullable="false" />
+          <Property Type="Int64" Name="IdSolicitud" Nullable="false" />
+          <Property Type="Int64" Name="IdCliente" Nullable="false" />
+          <Property Type="Int32" Name="Interno" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="2" />
+          <Property Type="Decimal" Name="MontoTotal" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="NIT" />
+          <Property Type="String" Name="CodigoControl" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="QR" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="NroAsiento" Nullable="false" />
+          <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pasajero" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_INFORMACION_HORARIO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdHorario" />
+            <PropertyRef Name="Nombre" />
+            <PropertyRef Name="Hora" />
+          </Key>
+          <Property Type="Int64" Name="IdDepartamento" Nullable="false" />
+          <Property Type="Int64" Name="IdHorario" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="2" />
+        </EntityType>
+        <EntityType Name="V_INFORMACION_ITINERARIOS">
+          <Key>
+            <PropertyRef Name="IdItinerario" />
+            <PropertyRef Name="IdHorario" />
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="Departamento" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="IdBus" />
+            <PropertyRef Name="Detalle" />
+            <PropertyRef Name="DetalleCompleto" />
+          </Key>
+          <Property Type="Int64" Name="IdItinerario" Nullable="false" />
+          <Property Type="Int64" Name="IdHorario" Nullable="false" />
+          <Property Type="Int64" Name="IdDepartamento" Nullable="false" />
+          <Property Type="Int64" Name="IdUsuario" Nullable="false" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="2" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="Int64" Name="IdBus" Nullable="false" />
+          <Property Type="String" Name="Detalle" Nullable="false" MaxLength="76" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DetalleCompleto" Nullable="false" MaxLength="108" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_ITINERARIO_BUS_ASIENTO">
+          <Key>
+            <PropertyRef Name="IdDepartamento" />
+            <PropertyRef Name="Departamento" />
+            <PropertyRef Name="IdItinerario" />
+            <PropertyRef Name="Fecha" />
+            <PropertyRef Name="IdBus" />
+            <PropertyRef Name="Interno" />
+            <PropertyRef Name="Hora" />
+            <PropertyRef Name="IdAsiento" />
+            <PropertyRef Name="Asiento" />
+            <PropertyRef Name="NroAsiento" />
+            <PropertyRef Name="TipoBus" />
+            <PropertyRef Name="Precio" />
+          </Key>
+          <Property Type="Int64" Name="IdDepartamento" Nullable="false" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="IdItinerario" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="Int64" Name="IdBus" Nullable="false" />
+          <Property Type="Int32" Name="Interno" Nullable="false" />
+          <Property Type="Time" Name="Hora" Nullable="false" Precision="2" />
+          <Property Type="Int64" Name="IdAsiento" Nullable="false" />
+          <Property Type="String" Name="Asiento" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NroAsiento" Nullable="false" />
+          <Property Type="String" Name="TipoBus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NroColumnas" />
+          <Property Type="Decimal" Name="Precio" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+        <Association Name="FK_ASIENTO_BUS">
+          <End Type="VENTAS_PASAJE_MODEL.BUS" Role="BUS" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.ASIENTO" Role="ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ASIENTO">
+              <PropertyRef Name="IdBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO">
+          <End Type="VENTAS_PASAJE_MODEL.ASIENTO" Role="ASIENTO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" Role="DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASIENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdAsiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_ASIENTO">
+          <End Type="VENTAS_PASAJE_MODEL.ASIENTO" Role="ASIENTO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA" Role="DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASIENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdAsiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BUS__IdTipoBus__31EC6D26">
+          <End Type="VENTAS_PASAJE_MODEL.TIPO_BUS" Role="TIPO_BUS" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.BUS" Role="BUS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BUS">
+              <PropertyRef Name="IdTipoBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_BUS">
+          <End Type="VENTAS_PASAJE_MODEL.BUS" Role="BUS" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.ITINERARIO" Role="ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUS">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdBus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAJA_USUA__IdCaj__2C3393D0">
+          <End Type="VENTAS_PASAJE_MODEL.CAJA" Role="CAJA" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.CAJA_USUARIO" Role="CAJA_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAJA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CAJA_USUARIO">
+              <PropertyRef Name="IdCaja" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAJA_USUA__IdUsu__2D27B809">
+          <End Type="VENTAS_PASAJE_MODEL.USUARIO" Role="USUARIO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.CAJA_USUARIO" Role="CAJA_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CAJA_USUARIO">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLEADO__IdCarg__239E4DCF">
+          <End Type="VENTAS_PASAJE_MODEL.CARGO" Role="CARGO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.EMPLEADO" Role="EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARGO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JURIDICO__Id__164452B1">
+          <End Type="VENTAS_PASAJE_MODEL.CLIENTE" Role="CLIENTE" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.JURIDICO" Role="JURIDICO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JURIDICO">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NATURAL__Id__145C0A3F">
+          <End Type="VENTAS_PASAJE_MODEL.CLIENTE" Role="CLIENTE" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.NATURAL" Role="NATURAL" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NATURAL">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE">
+          <End Type="VENTAS_PASAJE_MODEL.CLIENTE" Role="CLIENTE" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" Role="DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_PASAJE_CLIENTE1">
+          <End Type="VENTAS_PASAJE_MODEL.CLIENTE" Role="CLIENTE" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" Role="SOLICITUD_PASAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_RESERVA_CLIENTE">
+          <End Type="VENTAS_PASAJE_MODEL.CLIENTE" Role="CLIENTE" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_RESERVA" Role="SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_RESERVA">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DETALLE_D__IdDep__1CF15040">
+          <End Type="VENTAS_PASAJE_MODEL.DEPARTAMENTO" Role="DEPARTAMENTO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO" Role="DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdDepartamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DETALLE_D__IdHor__1DE57479">
+          <End Type="VENTAS_PASAJE_MODEL.HORARIO" Role="HORARIO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO" Role="DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HORARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO">
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO" Role="DETALLE_DEPARTAMENTO_HORARIO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.ITINERARIO" Role="ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLE_DEPARTAMENTO_HORARIO">
+              <PropertyRef Name="IdDepartamento" />
+              <PropertyRef Name="IdHorario" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdDepartamento" />
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO">
+          <End Type="VENTAS_PASAJE_MODEL.ITINERARIO" Role="ITINERARIO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" Role="DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITINERARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdItinerario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE">
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" Role="SOLICITUD_PASAJE" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" Role="DETALLE_SOLICITUD_ASIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_ASIENTO">
+              <PropertyRef Name="IdSolicitudPasaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO">
+          <End Type="VENTAS_PASAJE_MODEL.ITINERARIO" Role="ITINERARIO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA" Role="DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITINERARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdItinerario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA">
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_RESERVA" Role="SOLICITUD_RESERVA" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA" Role="DETALLE_SOLICITUD_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_RESERVA">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DETALLE_SOLICITUD_RESERVA">
+              <PropertyRef Name="IdSolicitudReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_DOSIFICACION">
+          <End Type="VENTAS_PASAJE_MODEL.DOSIFICACION" Role="DOSIFICACION" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.FACTURA" Role="FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOSIFICACION">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="IdDosificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USUARIO__IdEmple__276EDEB3">
+          <End Type="VENTAS_PASAJE_MODEL.EMPLEADO" Role="EMPLEADO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.USUARIO" Role="USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="IdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLICITUD_PASAJE_EMPLEADO">
+          <End Type="VENTAS_PASAJE_MODEL.EMPLEADO" Role="EMPLEADO" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" Role="SOLICITUD_PASAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="IdEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_SOLICITUD_PASAJE">
+          <End Type="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" Role="SOLICITUD_PASAJE" Multiplicity="0..1" />
+          <End Type="VENTAS_PASAJE_MODEL.FACTURA" Role="FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SOLICITUD_PASAJE">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="IdSolicitudPasaje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITINERARIO_USUARIO">
+          <End Type="VENTAS_PASAJE_MODEL.USUARIO" Role="USUARIO" Multiplicity="1" />
+          <End Type="VENTAS_PASAJE_MODEL.ITINERARIO" Role="ITINERARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ITINERARIO">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="V_VENTA_EMPLEADO">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Empleado" />
+            <PropertyRef Name="Fecha" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Empleado" Nullable="false" MaxLength="152" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="MontoTotal" Precision="18" Scale="2" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VENTAS_PASAJE_MODELStoreContainer" CdmEntityContainer="VENTAS_PASAJE_ENTITIES">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VENTAS_PASAJE_MODEL.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VENTAS_PASAJE_MODEL.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="VENTAS_PASAJE_MODEL.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="ASIENTO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.ASIENTO">
+              <MappingFragment StoreEntitySet="ASIENTO">
+                <ScalarProperty Name="NroAsiento" ColumnName="NroAsiento" />
+                <ScalarProperty Name="Asiento1" ColumnName="Asiento" />
+                <ScalarProperty Name="IdBus" ColumnName="IdBus" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AUXILIAR">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.AUXILIAR">
+              <MappingFragment StoreEntitySet="AUXILIAR">
+                <ScalarProperty Name="PrecioMinimo" ColumnName="PrecioMinimo" />
+                <ScalarProperty Name="PrecioMaximo" ColumnName="PrecioMaximo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BUS">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.BUS">
+              <MappingFragment StoreEntitySet="BUS">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Placa" ColumnName="Placa" />
+                <ScalarProperty Name="Interno" ColumnName="Interno" />
+                <ScalarProperty Name="IdTipoBus" ColumnName="IdTipoBus" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAJA">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.CAJA">
+              <MappingFragment StoreEntitySet="CAJA">
+                <ScalarProperty Name="NroCaja" ColumnName="NroCaja" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAJA_USUARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.CAJA_USUARIO">
+              <MappingFragment StoreEntitySet="CAJA_USUARIO">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdCaja" ColumnName="IdCaja" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARGO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.CARGO">
+              <MappingFragment StoreEntitySet="CARGO">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEPARTAMENTO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.DEPARTAMENTO">
+              <MappingFragment StoreEntitySet="DEPARTAMENTO">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_DEPARTAMENTO_HORARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO">
+              <MappingFragment StoreEntitySet="DETALLE_DEPARTAMENTO_HORARIO">
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_SOLICITUD_ASIENTO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO">
+              <MappingFragment StoreEntitySet="DETALLE_SOLICITUD_ASIENTO">
+                <ScalarProperty Name="IdItinerario" ColumnName="IdItinerario" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdAsiento" ColumnName="IdAsiento" />
+                <ScalarProperty Name="IdSolicitudPasaje" ColumnName="IdSolicitudPasaje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_SOLICITUD_RESERVA">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA">
+              <MappingFragment StoreEntitySet="DETALLE_SOLICITUD_RESERVA">
+                <ScalarProperty Name="IdItinerario" ColumnName="IdItinerario" />
+                <ScalarProperty Name="IdAsiento" ColumnName="IdAsiento" />
+                <ScalarProperty Name="IdSolicitudReserva" ColumnName="IdSolicitudReserva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOSIFICACION">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.DOSIFICACION">
+              <MappingFragment StoreEntitySet="DOSIFICACION">
+                <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+                <ScalarProperty Name="Llave" ColumnName="Llave" />
+                <ScalarProperty Name="NroFinal" ColumnName="NroFinal" />
+                <ScalarProperty Name="NroIncial" ColumnName="NroIncial" />
+                <ScalarProperty Name="NroTramite" ColumnName="NroTramite" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLEADO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.EMPLEADO">
+              <MappingFragment StoreEntitySet="EMPLEADO">
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACTURA">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.FACTURA">
+              <MappingFragment StoreEntitySet="FACTURA">
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="QR" ColumnName="QR" />
+                <ScalarProperty Name="CodigoControl" ColumnName="CodigoControl" />
+                <ScalarProperty Name="NroFactura" ColumnName="NroFactura" />
+                <ScalarProperty Name="IdDosificacion" ColumnName="IdDosificacion" />
+                <ScalarProperty Name="IdSolicitudPasaje" ColumnName="IdSolicitudPasaje" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HORARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.HORARIO">
+              <MappingFragment StoreEntitySet="HORARIO">
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INFORMACION_PASAJE">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.INFORMACION_PASAJE">
+              <MappingFragment StoreEntitySet="INFORMACION_PASAJE">
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="NroAsiento" ColumnName="NroAsiento" />
+                <ScalarProperty Name="IdAsiento" ColumnName="IdAsiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITINERARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.ITINERARIO">
+              <MappingFragment StoreEntitySet="ITINERARIO">
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdBus" ColumnName="IdBus" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JURIDICO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.JURIDICO">
+              <MappingFragment StoreEntitySet="JURIDICO">
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NATURAL">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.NATURAL">
+              <MappingFragment StoreEntitySet="NATURAL">
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOLICITUD_PASAJE">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE">
+              <MappingFragment StoreEntitySet="SOLICITUD_PASAJE">
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOLICITUD_RESERVA">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.SOLICITUD_RESERVA">
+              <MappingFragment StoreEntitySet="SOLICITUD_RESERVA">
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_BUS">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.TIPO_BUS">
+              <MappingFragment StoreEntitySet="TIPO_BUS">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="NroColumnas" ColumnName="NroColumnas" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_ASIENTO_CLIENTE">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_ASIENTO_CLIENTE">
+              <MappingFragment StoreEntitySet="V_ASIENTO_CLIENTE">
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="NroAsiento" ColumnName="NroAsiento" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_BUSTIPO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_BUSTIPO">
+              <MappingFragment StoreEntitySet="V_BUSTIPO">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="NroColumnas" ColumnName="NroColumnas" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Placa" ColumnName="Placa" />
+                <ScalarProperty Name="Interno" ColumnName="Interno" />
+                <ScalarProperty Name="IdTipoBus" ColumnName="IdTipoBus" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_CLIENTE_GENERAL">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_CLIENTE_GENERAL">
+              <MappingFragment StoreEntitySet="V_CLIENTE_GENERAL">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_CLIENTE_JURIDICO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_CLIENTE_JURIDICO">
+              <MappingFragment StoreEntitySet="V_CLIENTE_JURIDICO">
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_CLIENTE_NATURAL">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_CLIENTE_NATURAL">
+              <MappingFragment StoreEntitySet="V_CLIENTE_NATURAL">
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_DETALLE_VIAJE">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_DETALLE_VIAJE">
+              <MappingFragment StoreEntitySet="V_DETALLE_VIAJE">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_EMPLEADO_USUARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_EMPLEADO_USUARIO">
+              <MappingFragment StoreEntitySet="V_EMPLEADO_USUARIO">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+                <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="CI" ColumnName="CI" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_FACTURA">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_FACTURA">
+              <MappingFragment StoreEntitySet="V_FACTURA">
+                <ScalarProperty Name="Pasajero" ColumnName="Pasajero" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="NroAsiento" ColumnName="NroAsiento" />
+                <ScalarProperty Name="QR" ColumnName="QR" />
+                <ScalarProperty Name="CodigoControl" ColumnName="CodigoControl" />
+                <ScalarProperty Name="NIT" ColumnName="NIT" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Interno" ColumnName="Interno" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_INFORMACION_HORARIO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_INFORMACION_HORARIO">
+              <MappingFragment StoreEntitySet="V_INFORMACION_HORARIO">
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_INFORMACION_ITINERARIOS">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_INFORMACION_ITINERARIOS">
+              <MappingFragment StoreEntitySet="V_INFORMACION_ITINERARIOS">
+                <ScalarProperty Name="DetalleCompleto" ColumnName="DetalleCompleto" />
+                <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+                <ScalarProperty Name="IdBus" ColumnName="IdBus" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+                <ScalarProperty Name="IdItinerario" ColumnName="IdItinerario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_ITINERARIO_BUS_ASIENTO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_ITINERARIO_BUS_ASIENTO">
+              <MappingFragment StoreEntitySet="V_ITINERARIO_BUS_ASIENTO">
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="NroColumnas" ColumnName="NroColumnas" />
+                <ScalarProperty Name="TipoBus" ColumnName="TipoBus" />
+                <ScalarProperty Name="NroAsiento" ColumnName="NroAsiento" />
+                <ScalarProperty Name="Asiento" ColumnName="Asiento" />
+                <ScalarProperty Name="IdAsiento" ColumnName="IdAsiento" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Interno" ColumnName="Interno" />
+                <ScalarProperty Name="IdBus" ColumnName="IdBus" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdItinerario" ColumnName="IdItinerario" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_VENTA_EMPLEADO">
+            <EntityTypeMapping TypeName="VENTAS_PASAJE_MODEL.V_VENTA_EMPLEADO">
+              <MappingFragment StoreEntitySet="V_VENTA_EMPLEADO">
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Empleado" ColumnName="Empleado" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

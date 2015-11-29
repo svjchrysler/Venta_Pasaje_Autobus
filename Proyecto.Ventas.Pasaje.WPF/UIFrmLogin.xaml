@@ -1,0 +1,19 @@
+﻿<Controls:MetroWindow x:Class="Proyecto.Ventas.Pasaje.WPF.UIFrmLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto.Ventas.Pasaje.WPF"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="UIFrmLogin" Height="218.414" Width="302.55" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="txbUsername" CharacterCasing="Upper" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="USERNAME" Height="23" Margin="63,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="label" Content="INICIAR SESION" Margin="51,10,0,0" RenderTransformOrigin="0.277,0.329" Foreground="#FF0091EA" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+        <PasswordBox x:Name="txbPassword"  HorizontalAlignment="Left" Margin="63,109,0,0" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="********" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="btnIniciar" IsDefault="True" Content="INGRESAR" HorizontalAlignment="Left" Margin="91,147,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="btnIniciar_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>

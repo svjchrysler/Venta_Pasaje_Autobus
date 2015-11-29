@@ -1,0 +1,14 @@
+﻿<Page x:Class="Proyecto.Ventas.Pasaje.WPF.UIFrmBienvenida"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="UIFrmBienvenida" Height="538" Width="824">
+
+    <Grid>
+        <Label Content="BIENVENIDO AL SISTEMA" HorizontalAlignment="Left" Margin="166,0,0,0" VerticalAlignment="Top" Foreground="#FF1DD8D0" FontWeight="Bold" FontFamily="pacifico" FontSize="36"/>
+        <Image Name="img" HorizontalAlignment="Left" Height="432" Margin="36,82,0,0" VerticalAlignment="Top" Width="751" Source="Images/flota.jpg" Stretch="Fill"/>
+
+    </Grid>
+</Page>

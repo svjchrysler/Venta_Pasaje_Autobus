@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{899EFE68-266F-459B-AC8F-6DB4973DAE81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto.Ventas.Pasaje.WPF</RootNamespace>
+    <AssemblyName>Proyecto.Ventas.Pasaje.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.0.1.29147, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCodeNet.0.3\lib\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="EstadisticaVentas.xaml.cs">
+      <DependentUpon>EstadisticaVentas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmBienvenida.xaml.cs">
+      <DependentUpon>UIFrmBienvenida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmBus.xaml.cs">
+      <DependentUpon>UIFrmBus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmCrearModeloBus.xaml.cs">
+      <DependentUpon>UIFrmCrearModeloBus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmDepartamento.xaml.cs">
+      <DependentUpon>UIFrmDepartamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmFactura.xaml.cs">
+      <DependentUpon>UIFrmFactura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmHora.xaml.cs">
+      <DependentUpon>UIFrmHora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmItinerario.xaml.cs">
+      <DependentUpon>UIFrmItinerario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmItinerarioBus.xaml.cs">
+      <DependentUpon>UIFrmItinerarioBus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmLogin.xaml.cs">
+      <DependentUpon>UIFrmLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmPrecio.xaml.cs">
+      <DependentUpon>UIFrmPrecio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmReporteVentaEmpleado.xaml.cs">
+      <DependentUpon>UIFrmReporteVentaEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmReserva.xaml.cs">
+      <DependentUpon>UIFrmReserva.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmSolicitudItinerario.xaml.cs">
+      <DependentUpon>UIFrmSolicitudItinerario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmTipoBus.xaml.cs">
+      <DependentUpon>UIFrmTipoBus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIFrmVentaPasaje.xaml.cs">
+      <DependentUpon>UIFrmVentaPasaje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Page Include="EstadisticaVentas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIFrmBienvenida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmFactura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmPrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIFrmPrincipal.xaml.cs">
+      <DependentUpon>UIFrmPrincipal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UIFrmBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmCrearModeloBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmDepartamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmHora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmItinerario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmItinerarioBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmPrecio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmReporteVentaEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmReserva.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmSolicitudItinerario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmTipoBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIFrmVentaPasaje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\V_VENTA_EMPLEADO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\localhost\WebService.wsdl" />
+    <None Include="Web References\localhost\WebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\WebService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\WebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proyecto.Ventas.Pasaje.Datos\Proyecto.Ventas.Pasaje.Datos.csproj">
+      <Project>{304f3e7b-b49c-4e1e-9ac7-2bb92a8a497e}</Project>
+      <Name>Proyecto.Ventas.Pasaje.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Ventas.Pasaje.RN\Proyecto.Ventas.Pasaje.RN.csproj">
+      <Project>{3b82ecb4-9808-4d50-a7c4-0e3afd707f11}</Project>
+      <Name>Proyecto.Ventas.Pasaje.RN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Ventas.Pasaje.Utilitarios\Proyecto.Ventas.Pasaje.Utilitarios.csproj">
+      <Project>{4fbef29e-5ebc-4e8e-9ed0-70124f5d9d56}</Project>
+      <Name>Proyecto.Ventas.Pasaje.Utilitarios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\li.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\a.png" />
+    <Resource Include="Images\reserva.png" />
+    <Resource Include="Images\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flota.jpg" />
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+    <None Include="Web References\localhost\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:52930/WebService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:52930/WebService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Proyecto_Ventas_Pasaje_WPF_localhost_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

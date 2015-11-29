@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f2d25792e62463580701fe927cd5929" Name="Diagrama1" ZoomLevel="60">
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.ASIENTO" Width="1.5" PointX="2.6967731484662618" PointY="31.646240934564844" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.AUXILIAR" Width="1.5" PointX="9.3625044475134942" PointY="11.636467834765309" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.BUS" Width="1.5" PointX="2.1886996115505228" PointY="1.54621680152892" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.CAJA" Width="1.5" PointX="0.799135728180006" PointY="1.1729843919970955" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.CAJA_USUARIO" Width="1.5" PointX="0.68957121702356794" PointY="12.26084937726187" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.CARGO" Width="1.5" PointX="7.3714939054900288" PointY="24.697548743662214" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.CLIENTE" Width="1.5" PointX="6.6965073452780519" PointY="13.170432231002689" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.DEPARTAMENTO" Width="1.5" PointX="0.836714214103629" PointY="23.444220687935232" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.DETALLE_DEPARTAMENTO_HORARIO" Width="1.5" PointX="3.9671900216337246" PointY="26.909421665086143" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_ASIENTO" Width="1.5" PointX="10.082352942825459" PointY="14.119063711780619" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.DETALLE_SOLICITUD_RESERVA" Width="1.5" PointX="7.197277394680901" PointY="26.436011460812768" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.DOSIFICACION" Width="1.5" PointX="1.9402539161687038" PointY="18.884211340399556" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.EMPLEADO" Width="1.5" PointX="4.7610997617063582" PointY="8.5842297266164" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.FACTURA" Width="1.5" PointX="2.8596280901039153" PointY="3.1341100498727106" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.HORARIO" Width="1.5" PointX="4.17096506812189" PointY="7.7939117885166365" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.INFORMACION_PASAJE" Width="1.5" PointX="2.72531931787977" PointY="22.90282927029898" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.ITINERARIO" Width="1.5" PointX="9.3864641792077865" PointY="22.699100937088534" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.JURIDICO" Width="1.5" PointX="4.8021246906379815" PointY="23.822138007647421" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.NATURAL" Width="1.5" PointX="9.0628549014510842" PointY="24.581475433232949" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.SOLICITUD_PASAJE" Width="1.5" PointX="2.2408429897580495" PointY="16.046430014095471" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.SOLICITUD_RESERVA" Width="1.5" PointX="10.753926554114525" PointY="23.261166061861985" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.sysdiagrams" Width="1.5" PointX="11.763278106117285" PointY="9.2539171172557015" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.TIPO_BUS" Width="1.5" PointX="6.8832452068492991" PointY="0.19790630051768679" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.USUARIO" Width="1.5" PointX="7.78489941721079" PointY="31.187869563320589" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_ASIENTO_CLIENTE" Width="1.5" PointX="7.1399911712575665" PointY="26.541824859819293" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_BUSTIPO" Width="1.5" PointX="11.787440361356103" PointY="9.1820597095331458" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_GENERAL" Width="1.5" PointX="8.8973320782637835" PointY="21.051709378627926" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_JURIDICO" Width="1.5" PointX="8.7401764452178856" PointY="12.75538360176393" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_CLIENTE_NATURAL" Width="1.5" PointX="9.9270864342931127" PointY="6.0824671863030959" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_DETALLE_VIAJE" Width="1.5" PointX="11.602575676330634" PointY="29.252302570851661" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_EMPLEADO_USUARIO" Width="1.5" PointX="9.72020321046943" PointY="30.996918558607305" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_FACTURA" Width="1.5" PointX="8.26890407887702" PointY="26.044944790212877" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_INFORMACION_HORARIO" Width="1.5" PointX="1.8724991985934318" PointY="28.754487811007763" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_INFORMACION_ITINERARIOS" Width="1.5" PointX="11.875116599665542" PointY="27.158251983652939" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_ITINERARIO_BUS_ASIENTO" Width="1.5" PointX="0.13678739598802636" PointY="10.409099896628922" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_ASIENTO_BUS" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ASIENTO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ASIENTO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__BUS__IdTipoBus__31EC6D26" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_BUS" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdCaj__2C3393D0" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__CAJA_USUA__IdUsu__2D27B809" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__EMPLEADO__IdCarg__239E4DCF" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__JURIDICO__Id__164452B1" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__NATURAL__Id__145C0A3F" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_CLIENTE" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_CLIENTE1" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_RESERVA_CLIENTE" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdDep__1CF15040" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__DETALLE_D__IdHor__1DE57479" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_DETALLE_DEPARTAMENTO_HORARIO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_ITINERARIO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_ASIENTO_SOLICITUD_PASAJE" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_ITINERARIO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_DETALLE_SOLICITUD_RESERVA_SOLICITUD_RESERVA" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_FACTURA_DOSIFICACION" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK__USUARIO__IdEmple__276EDEB3" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_SOLICITUD_PASAJE_EMPLEADO" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_FACTURA_SOLICITUD_PASAJE" />
+        <AssociationConnector Association="VENTAS_PASAJE_MODEL.FK_ITINERARIO_USUARIO" />
+        <EntityTypeShape EntityType="VENTAS_PASAJE_MODEL.V_VENTA_EMPLEADO" Width="1.5" PointX="2.761510760877985" PointY="0.18912978479132511" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

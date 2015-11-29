@@ -1,0 +1,17 @@
+﻿<Controls:MetroWindow x:Class="Proyecto.Ventas.Pasaje.WPF.UIFrmHora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="UIFrmHora" Height="196" Width="278" WindowStartupLocation="CenterScreen">
+    
+    <Grid Margin="0,0,-8,-21">
+        <Label Content=":" HorizontalAlignment="Left" Margin="148,55,0,0" VerticalAlignment="Top" Width="21" FontSize="24" RenderTransformOrigin="0.667,-0.357" Height="42"/>
+        <Label Content="HORA : " HorizontalAlignment="Left" Margin="31,68,0,0" VerticalAlignment="Top"/>
+        <Label Content="REGISTRAR HORA" HorizontalAlignment="Left" Margin="33,13,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Pacifico" Foreground="#2196F3" FontWeight="Bold"/>
+        <Button Name="btnAgregarHora" Content="AGREGAR HORA" HorizontalAlignment="Left" Margin="87,112,0,0" VerticalAlignment="Top" Width="117" Height="29" Click="btnAgregarHora_Click"/>
+        <ComboBox Name="cbHora" HorizontalAlignment="Left" Margin="83,70,0,0" VerticalAlignment="Top" Width="60"/>
+        <ComboBox Name="cbMinuto" HorizontalAlignment="Left" Margin="174,70,0,0" VerticalAlignment="Top" Width="60"/>
+    </Grid>
+</Controls:MetroWindow>
